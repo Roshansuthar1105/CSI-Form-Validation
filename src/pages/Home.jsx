@@ -54,7 +54,7 @@ export default function Home() {
               description: 'Easy to extend and customize'
             }
           ].map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
             >
@@ -80,7 +80,32 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-16 text-center text-gray-400">
-          <p>Built with React, Tailwind CSS, and React Router By : Roshan Suthar</p>
+          <p>Built with React, Tailwind CSS, and React Router </p>
+          <p> Made with ❤️ By : Roshan Suthar</p>
+          <div className="flex justify-center space-x-4 mt-4">
+            <a
+              href="https://www.linkedin.com/in/roshansuthar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/roshansuthar1105"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="mailto:roshansuthar2023@gmail.com"
+              className="hover:text-gray-300 transition-colors"
+            >
+              Email
+            </a>
+          </div>
         </footer>
       </div>
 
