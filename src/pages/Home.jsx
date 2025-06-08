@@ -2,69 +2,70 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
-  const features=[
+  const features = [
     {
       icon: '✅',
       title: 'Real-time Validation',
       description: 'Instant feedback as users fill out the form',
-      bgColor:'bg-orange-500',
-      bgHoverColor:'hover:bg-orange-500/20'
+      bgColor: 'bg-emerald-500/20',
+      bgHoverColor: 'hover:bg-emerald-500/30',
     },
     {
       icon: '🔒',
       title: 'Secure Data Handling',
       description: 'Properly managed form state and submissions',
-      bgColor: 'bg-blue-500',
-      bgHoverColor: 'hover:bg-blue-500/20'
+      bgColor: 'bg-cyan-500/20',
+      bgHoverColor: 'hover:bg-cyan-500/30',
     },
     {
       icon: '🎨',
       title: 'Beautiful UI',
       description: 'Glassmorphism design with smooth animations',
-      bgColor: 'bg-green-500',
-      bgHoverColor: 'hover:bg-green-500/20'
+      bgColor: 'bg-pink-500/20',
+      bgHoverColor: 'hover:bg-pink-500/30',
     },
     {
       icon: '📱',
       title: 'Responsive',
       description: 'Works perfectly on all device sizes',
-      bgColor: 'bg-red-500',
-      bgHoverColor: 'hover:bg-red-500/20',
+      bgColor: 'bg-indigo-500/20',
+      bgHoverColor: 'hover:bg-indigo-500/30',
     },
     {
       icon: '⚡',
       title: 'Fast Performance',
       description: 'Optimized for quick loading and interaction',
-      bgColor: 'bg-yellow-500',
-      bgHoverColor: 'hover:bg-yellow-500/20'
+      bgColor: 'bg-yellow-400/20',
+      bgHoverColor: 'hover:bg-yellow-400/30',
     },
     {
       icon: '🧩',
       title: 'Modular Components',
       description: 'Easy to extend and customize',
-      bgColor: 'bg-purple-500',
-      bgHoverColor:'hover:bg-purple-500/20'
-    }
-  ]
+      bgColor: 'bg-fuchsia-500/20',
+      bgHoverColor: 'hover:bg-fuchsia-500/30',
+    },
+  ];
+  
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#24243e] via-[#302b63] to-[#0f0c29] ">
       {/* Background elements */}
-      <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-purple-600/20 blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-pink-600/20 blur-3xl animate-float-delay"></div>
-      <div className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-600/20 blur-2xl animate-float-delay-2"></div>
-
+      <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cyan-600/20 blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-cyan-500/20 blur-3xl animate-float-delay"></div>
+      <div className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-500/20 blur-2xl animate-float-delay-2"></div>
+  
       {/* Main content */}
       <div className="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent mb-4">
             Form Validation App
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             A modern React form with comprehensive validation, beautiful UI, and seamless user experience.
           </p>
         </header>
-
+  
         {/* Features grid */}
         <div className="grid md:grid-cols-3 gap-2 mb-16 w-full max-w-6xl">
           {features.map((feature, index) => (
@@ -72,19 +73,20 @@ export default function Home() {
               key={index}
               className={`cursor-default backdrop-blur-sm border border-white/10 rounded-xl p-6 py-12 ${feature.bgHoverColor} transition-all duration-300 ${feature.bgColor}`}
             >
-              <div className="text-3xl flex items-center gap-2 align-bottom ">{feature.icon}
-              <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+              <div className="text-3xl flex items-center gap-2 align-bottom">
+                {feature.icon}
+                <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
               </div>
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
-
+  
         {/* CTA */}
         <div className="text-center">
           <Link
             to="/form"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-xl text-white font-semibold text-lg shadow-lg hover:shadow-pink-500/20 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 rounded-xl text-white font-semibold text-lg shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"
           >
             Go to Form
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -92,11 +94,22 @@ export default function Home() {
             </svg>
           </Link>
         </div>
-
+  
         {/* Footer */}
         <footer className="mt-16 text-center text-gray-400 flex flex-col items-center gap-1">
           <p>Built with React, Tailwind CSS, and React Router </p>
-          <p> Made with ❤️ By : <a href="https://www.linkedin.com/in/roshansuthar" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300 transition-colors" > Roshan Suthar </a> </p>
+          <p>
+            Made with ❤️ By :
+            <a
+              href="https://www.linkedin.com/in/roshansuthar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyan-300 transition-colors"
+            >
+              {' '}
+              Roshan Suthar{' '}
+            </a>
+          </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a
               href="https://www.linkedin.com/in/roshansuthar"
@@ -105,7 +118,7 @@ export default function Home() {
               className="hover:text-gray-300 transition-colors flex items-center gap-1"
             >
               <span className="text-white">LinkedIn</span>
-              <FaLinkedin className="text-blue-400" />
+              <FaLinkedin className="text-cyan-400" />
             </a>
             <a
               href="https://github.com/roshansuthar1105"
@@ -126,13 +139,19 @@ export default function Home() {
           </div>
         </footer>
       </div>
-
+  
       {/* Animation styles */}
       <style jsx global>{`
         @keyframes float {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(5deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
+          0% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(5deg);
+          }
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
         }
         .animate-float {
           animation: float 8s ease-in-out infinite;
@@ -145,5 +164,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  );
+  );  
 }
