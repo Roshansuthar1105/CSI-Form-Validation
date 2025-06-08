@@ -205,7 +205,14 @@ export default function FormPage() {
             </div>
 
             {/* Submit button */}
-            <div className="md:col-span-2 mt-4">
+              <a
+                className="w-full px-6 py-4 text-center bg-gradient-to-r to-cyan-500 from-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-xl text-white font-semibold shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:transform-none disabled:cursor-not-allowed"
+                href='/'
+              >
+                <span className="mr-2">←</span>
+                Back to Home page
+              </a>
+            {/* <div className=" group flex flex-row align-baseline justify-center w-full bg-red-200 "> */}
               <button
                 type="submit"
                 disabled={Object.keys(errors).length > 0}
@@ -214,7 +221,7 @@ export default function FormPage() {
                 Register Now
                 <span className="ml-2">→</span>
               </button>
-            </div>
+            {/* </div> */}
           </form>
         </div>
       </div>
