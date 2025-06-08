@@ -1,8 +1,5 @@
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-
-export default function SubmittedPage() {
+export default function Success() {
   const { state } = useLocation();
   if (!state) {
     return (

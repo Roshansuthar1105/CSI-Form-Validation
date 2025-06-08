@@ -33,7 +33,7 @@ src/
 ├── pages/
     ├── Home.jsx            // Home Page
     ├── FormPage.jsx        // Form Page
-    ├── SubmittedPage.jsx   // Page showing submitted data 
+    ├── Success.jsx   // Page showing submitted data 
 ```
 
 ---

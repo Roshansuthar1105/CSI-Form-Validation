@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 const FormPage = lazy(() => import("./pages/FormPage"));
-const SubmittedPage = lazy(() => import("./pages/SubmittedPage"));
+const Success = lazy(() => import("./pages/Success"));
 const HomePage = lazy(() => import("./pages/Home"));
 const ScrollToTop = ({ children }) => {
   const location = useLocation();
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/form" element={<FormPage />} />
-          <Route path="/submitted" element={<SubmittedPage />} />
+          <Route path="/submitted" element={<Success />} />
         </Routes>
       </ScrollToTop>
     </Router>
