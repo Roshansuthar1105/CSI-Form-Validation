@@ -1,12 +1,97 @@
-# React + Vite
+# 🚀 React Form Validation App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple yet complete **React** application that demonstrates **form validation without third-party libraries**. 💡
 
-Currently, two official plugins are available:
+## 📝 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Required fields validation (No libraries used!)
+- 🚫 Submit button disabled until all fields are valid
+- ⚠️ Inline error messages for each field
+- 🔐 Password show/hide toggle
+- 🌍 Dropdowns for Country and City
+- 📞 Phone field with country code and number
+- 📄 PAN & Aadhar field validation
+- 🔀 Redirects to a new route on successful form submission
+- 📋 Displays all filled details on the new route
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔧 Tech Stack
+
+- ⚛️ React
+- 💅 CSS
+- 🔀 React Router DOM
+
+---
+
+## 📂 Folder Structure
+
+```
+src/
+├── App.jsx                 // Main Page
+├── index.css          // Tailwind Styles
+├── pages/
+    ├── Home.jsx            // Home Page
+    ├── FormPage.jsx        // Form Page
+    ├── SubmittedPage.jsx   // Page showing submitted data 
+```
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Roshansuthar1105/form-validation.git
+cd form-validation
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app
+
+```bash
+npm run dev
+```
+
+---
+
+## 🌐 Deployment
+
+🔗 Live Demo: [https://celebal-form-validation.netlify.app/](https://celebal-form-validation.netlify.app/)
+
+---
+
+## 🖼️ Screenshots
+
+| Form Page | Success Page |
+|-----------|--------------|
+| ✅ Input Fields with Error Messages | 🎉 Display Filled Details |
+
+---
+
+## 🙌 Contribution
+
+Feel free to fork the repo and create a PR. Happy coding! 💻✨
+
+---
+
+## 👤 Author
+
+**Roshan Suthar**  
+🔗 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/roshansuthar)
+
+---
+
+## 📄 License
+
+MIT © 2025
+
+---
+
+Made with ❤️ using React

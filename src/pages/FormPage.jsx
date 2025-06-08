@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { BsEyeFill } from 'react-icons/bs';
+import { RiEyeCloseFill } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 
 const countries = {
@@ -64,14 +66,14 @@ export default function FormPage() {
   }, [formData]);
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 p-4">
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#24243e] via-[#302b63] to-[#0f0c29] p-4">
       {/* Floating circles in background */}
-      <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-purple-600/20 blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-pink-600/20 blur-3xl animate-float-delay"></div>
-      <div className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-600/20 blur-2xl animate-float-delay-2"></div>
+      <div className="absolute -top-10 left-20 w-64 h-64 rounded-full bg-purple-600/20 blur-lg  animate-float"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-pink-600/20 blur-lg animate-float-delay"></div>
+      <div className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-600/20 blur-lg animate-float-delay-2"></div>
       
       {/* Main form container with glassmorphism effect */}
-      <div className="relative w-full max-w-4xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden z-10">
+      <div className="relative w-full max-w-5xl bg-white/50 backdrop-blur-sm border border-white/10 rounded-3xl shadow-2xl overflow-hidden z-20">
         {/* Decorative gradient border */}
         <div className="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-br from-white/30 to-transparent -z-10">
           <div className="w-full h-full bg-gradient-to-br from-gray-900/80 to-gray-900 rounded-3xl"></div>
@@ -117,15 +119,17 @@ export default function FormPage() {
                 placeholder="Enter password"
                 className="w-full px-4 py-3 bg-white/5 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-pink-500 transition-all duration-200"
               />
-              <label className="flex items-center gap-2 mt-3 text-sm text-gray-400 hover:text-gray-200 cursor-pointer transition-colors">
+              <label className="flex items-center gap-2 mt-3 text-sm text-gray-400 hover:text-gray-200 cursor-pointer transition-colors relative ">
                 <input
                   type="checkbox"
                   name="showPassword"
                   checked={formData.showPassword}
                   onChange={handleChange}
-                  className="w-4 h-4 accent-pink-500"
+                  className="w-4 h-4 accent-pink-500 hidden"
                 />
-                Show Password
+                {formData.showPassword ? 
+                <RiEyeCloseFill className='absolute -top-12 right-4 text-2xl text-pink-400' />:<BsEyeFill className='absolute -top-12 right-4 text-2xl text-pink-400' />
+                }
               </label>
               {errors.password && <p className="mt-1 text-sm text-pink-400">{errors.password}</p>}
             </div>
@@ -140,9 +144,9 @@ export default function FormPage() {
                   name="phoneCode"
                   value={formData.phoneCode}
                   onChange={handleChange}
-                  className="w-24 px-3 py-3 bg-white/5 border border-gray-700/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-pink-500 transition-all duration-200"
+                  className="w-24 px-3 py-3 bg-white/20 border border-gray-700/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-pink-500 transition-all duration-200"
                 >
-                  <option value="+91">+91 (IN)</option>
+                  <option value="+91" >+91 (IN)</option>
                   <option value="+1">+1 (US)</option>
                   <option value="+44">+44 (UK)</option>
                   <option value="+81">+81 (JP)</option>
@@ -216,9 +220,9 @@ export default function FormPage() {
       {/* Add some CSS for animations */}
       <style jsx global>{`
         @keyframes float {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(5deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
+          0% { transform: translateY(-50px) rotate(0deg); }
+          50% { transform: translateY(0px) rotate(5deg); }
+          100% { transform: translateY(50px) rotate(0deg); }
         }
         .animate-float {
           animation: float 8s ease-in-out infinite;
