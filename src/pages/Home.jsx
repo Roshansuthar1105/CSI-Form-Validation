@@ -1,8 +1,53 @@
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
+  const features=[
+    {
+      icon: '✅',
+      title: 'Real-time Validation',
+      description: 'Instant feedback as users fill out the form',
+      bgColor:'bg-orange-500',
+      bgHoverColor:'hover:bg-orange-500/20'
+    },
+    {
+      icon: '🔒',
+      title: 'Secure Data Handling',
+      description: 'Properly managed form state and submissions',
+      bgColor: 'bg-blue-500',
+      bgHoverColor: 'hover:bg-blue-500/20'
+    },
+    {
+      icon: '🎨',
+      title: 'Beautiful UI',
+      description: 'Glassmorphism design with smooth animations',
+      bgColor: 'bg-green-500',
+      bgHoverColor: 'hover:bg-green-500/20'
+    },
+    {
+      icon: '📱',
+      title: 'Responsive',
+      description: 'Works perfectly on all device sizes',
+      bgColor: 'bg-red-500',
+      bgHoverColor: 'hover:bg-red-500/20',
+    },
+    {
+      icon: '⚡',
+      title: 'Fast Performance',
+      description: 'Optimized for quick loading and interaction',
+      bgColor: 'bg-yellow-500',
+      bgHoverColor: 'hover:bg-yellow-500/20'
+    },
+    {
+      icon: '🧩',
+      title: 'Modular Components',
+      description: 'Easy to extend and customize',
+      bgColor: 'bg-purple-500',
+      bgHoverColor:'hover:bg-purple-500/20'
+    }
+  ]
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#24243e] via-[#302b63] to-[#0f0c29] ">
       {/* Background elements */}
       <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-purple-600/20 blur-3xl animate-float"></div>
       <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-pink-600/20 blur-3xl animate-float-delay"></div>
@@ -21,45 +66,15 @@ export default function Home() {
         </header>
 
         {/* Features grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16 w-full max-w-6xl">
-          {[
-            {
-              icon: '✅',
-              title: 'Real-time Validation',
-              description: 'Instant feedback as users fill out the form'
-            },
-            {
-              icon: '🔒',
-              title: 'Secure Data Handling',
-              description: 'Properly managed form state and submissions'
-            },
-            {
-              icon: '🎨',
-              title: 'Beautiful UI',
-              description: 'Glassmorphism design with smooth animations'
-            },
-            {
-              icon: '📱',
-              title: 'Responsive',
-              description: 'Works perfectly on all device sizes'
-            },
-            {
-              icon: '⚡',
-              title: 'Fast Performance',
-              description: 'Optimized for quick loading and interaction'
-            },
-            {
-              icon: '🧩',
-              title: 'Modular Components',
-              description: 'Easy to extend and customize'
-            }
-          ].map((feature, index) => (
+        <div className="grid md:grid-cols-3 gap-2 mb-16 w-full max-w-6xl">
+          {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+              className={`cursor-default backdrop-blur-sm border border-white/10 rounded-xl p-6 py-12 ${feature.bgHoverColor} transition-all duration-300 ${feature.bgColor}`}
             >
-              <div className="text-3xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+              <div className="text-3xl flex items-center gap-2 align-bottom ">{feature.icon}
+              <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+              </div>
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
@@ -79,31 +94,34 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-16 text-center text-gray-400">
+        <footer className="mt-16 text-center text-gray-400 flex flex-col items-center gap-1">
           <p>Built with React, Tailwind CSS, and React Router </p>
-          <p> Made with ❤️ By : Roshan Suthar</p>
+          <p> Made with ❤️ By : <a href="https://www.linkedin.com/in/roshansuthar" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300 transition-colors" > Roshan Suthar </a> </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a
               href="https://www.linkedin.com/in/roshansuthar"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors"
+              className="hover:text-gray-300 transition-colors flex items-center gap-1"
             >
-              LinkedIn
+              <span className="text-white">LinkedIn</span>
+              <FaLinkedin className="text-blue-400" />
             </a>
             <a
               href="https://github.com/roshansuthar1105"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors"
+              className="hover:text-gray-300 transition-colors flex items-center gap-1"
             >
-              GitHub
+              <span className="text-white">GitHub</span>
+              <FaGithub className="text-black-500" />
             </a>
             <a
               href="mailto:roshansuthar2023@gmail.com"
-              className="hover:text-gray-300 transition-colors"
+              className="hover:text-gray-300 transition-colors flex items-center gap-1"
             >
-              Email
+              <span className="text-white">Email</span>
+              <FaEnvelope className="text-white" />
             </a>
           </div>
         </footer>
