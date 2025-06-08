@@ -69,9 +69,11 @@ npm run dev
 
 ## 🖼️ Screenshots
 
-| Form Page | Success Page |
-|-----------|--------------|
-| ✅ Input Fields with Error Messages | 🎉 Display Filled Details |
+| Home Page | Form Page | Success Page |
+|-----------|-----------|--------------|
+|All About Form validation Website | ✅ Input Fields with Error Messages | 🎉 Display Filled Details |
+|![Home page](https://github.com/user-attachments/assets/e5ae030a-6b2a-4a4f-b32f-ef8f21128968)|![image](https://github.com/user-attachments/assets/70d03da9-362d-41ef-8f75-d0c28f739a91)|![image](https://github.com/user-attachments/assets/b44db096-92ee-4fd8-b9f3-e85c4b47cbb5)|
+
 
 ---
 
@@ -91,6 +93,7 @@ Feel free to fork the repo and create a PR. Happy coding! 💻✨
 ## 📄 License
 
 MIT © 2025
+[#LICENSE](LICENSE)
 
 ---
 
